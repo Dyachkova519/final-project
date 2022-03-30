@@ -11,18 +11,12 @@ import numpy as np
 import pandas as pd
 from sqlite3 import connect
 
-
-
 con = sqlite3.connect('test.db')
 cur = con.cursor()
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
-
-# вопросы анкеты
-
-# таблица с вопросами
 
 
 class Data(db.Model):
@@ -82,11 +76,8 @@ def answer_process():
         poemauthor=author,
         poemtitle=title
     )
-    # добавляем в базу
     db.session.add(user)
-    # сохраняемся
     db.session.commit()
-    # получаем юзера с айди (автоинкремент)
     db.session.refresh(user)
     return render_template('stat.html', userword=q3, rhymeline=rhymeline, author=author, title=title)
 
