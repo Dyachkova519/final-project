@@ -44,7 +44,7 @@ def answer_process():
         return redirect(url_for('question_page'))
     q3 = request.args.get('rhyme')
     rhymelist = pronouncing.rhymes(q3)
-    with open('poems_collection.csv', encoding='utf-8') as csvfile:
+    with open('final-project/poems_collection.csv', encoding='utf-8') as csvfile:
         reader = csv.DictReader(csvfile)
         for word in rhymelist:
             for el in reader:
