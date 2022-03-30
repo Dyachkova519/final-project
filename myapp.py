@@ -1,4 +1,3 @@
-pip install pronouncing
 from flask import Flask, render_template, request, redirect, url_for
 from sqlalchemy import func
 from flask_sqlalchemy import SQLAlchemy
