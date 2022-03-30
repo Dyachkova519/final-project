@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Поиск рифмы {% endblock %}
+
+{% block content %}
+<body>
+ 
+    <h4>Вы ввели слово:</h4>
+    <br>
+        <p>
+            {{userword}}
+        </p>
+    <h4>Вот строчка в рифму</h4>
+    <br>
+    {% if rhymeline == False %}
+    <p>Простите, в нашей базе не нашлось ничего в рифму :(</p>
+    {% else %}
+    <p>{{ rhymeline }}</p>
+    <p>Это строка из стихотворения {{title}}, автора {{author}}</p>
+    {% endif %}
+
+</body>
+{% endblock %}

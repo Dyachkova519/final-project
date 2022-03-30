@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %} Поиск рифмы {% endblock %}
+
+{% block content %}
+<body>
+	<form class="container" action="/process">
+		<br>
+		<h4>Подобрать рифму</h4>
+		<br>
+		<div class="row">
+			<div class="col-md-4">Введите английское слово</div>
+			<div class="col-md-4"><input type="text" name="rhyme"></div>
+		</div>
+		<br>
+		<div class="row">
+			<input class="btn btn-primary" type="submit" value="подобрать рифму">
+		</div>
+	</form>
+ </body>
+{% endblock %}

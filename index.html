@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %} Поиск рифмы {% endblock %}
+
+{% block content %}
+    <h1>Привет!</h1>
+    <p>На это сайте вы можете ввести английское слово, а в ответ получите строчку из стихотворения в рифму. Для этого переходите во вкладку "Поискать рифму к слову"</p>
+    <p>Еще во вкладке "Статистика" можно посмотреть на рифмы, которые подобрали другим пользователям</p>
+    <p>К сожалению, у нас не очень большая стихотворная база, поэтому рифму подобрать получается не всегда :(</p>
+    <p>Для поиска рифмы используется библиотека <a href="https://pronouncing.readthedocs.io/en/latest/" target="_blank">Pronouncing</a>, созданная на базе <a href="https://www.kaggle.com/datasets/rtatman/cmu-pronouncing-dictionary" target="_blank">CMU Pronouncing Dictionary</a></p>
+    <p>База данных стихотворений <a href="https://github.com/bugo99iot/poet_bot" target="_blank">отсюда</a></p>
+{% endblock %}
